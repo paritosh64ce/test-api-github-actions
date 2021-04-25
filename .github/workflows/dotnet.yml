@@ -19,9 +19,13 @@ jobs:
         dotnet-version: 3.1
     - name: Build with dotnet
       run: dotnet build --configuration Release netcore-api/netcore-api/netcore-api.csproj
-      
-    - name: dotnet publish
-      run: dotnet publish -c Release -o netcore-api ./netcore-api/netcore-api
+ 
+    - name: Hello World
+      run: echo Hello world, run number = $NBR
+      env:
+        NBR: ${{github.RUN_NUMBER}}
+#    - name: dotnet publish
+#      run: dotnet publish -c Release -o netcore-api ./netcore-api/netcore-api
 #    - name: Restore dependencies
 #      run: dotnet restore
 #    - name: Build
