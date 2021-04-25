@@ -11,5 +11,5 @@
     - builds the dotnet core application
     - Publish the output to Azure Web App
 
-API url: https://paritosh-test-app.azurewebsites.net/weatherforecast
-Demo: https://thankful-tree-06e6ab110.azurestaticapps.net/
+* API url: https://paritosh-test-app.azurewebsites.net/weatherforecast
+* Demo: https://thankful-tree-06e6ab110.azurestaticapps.net/
