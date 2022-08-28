@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -34,6 +34,28 @@ namespace netcore_api.Controllers
                 Summary = Summaries[rng.Next(Summaries.Length)]
             })
             .ToArray();
+        }
+
+        [HttpGet("error")]
+        public int GenerateRandomError()
+        {
+            var rdm = new Random();
+            switch (rdm.Next(6))
+            {
+
+                case 1:
+                    throw new DivideByZeroException();
+                case 2:
+                    throw new NullReferenceException();
+                case 3:
+                    throw new ArgumentNullException();
+                case 4:
+                    throw new IndexOutOfRangeException();
+                case 5:
+                    throw new ArgumentOutOfRangeException();
+            }
+            return rdm.Next(5);
+
         }
     }
 }
